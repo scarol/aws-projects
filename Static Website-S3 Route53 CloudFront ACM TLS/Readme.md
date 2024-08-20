@@ -3,6 +3,7 @@ Utilized Amazon S3 and Route 53 to host a static website, directing HTTP custom 
 Additionally, set up an Amazon CloudFront distribution to enforce HTTPS communication, employing a TLS certificate generated via AWS Certificate Manager (ACM).
 
 Registered new DNS: skarol.click
+
 Website URL : https://skarol.click/
 
 Note: To see if CDN enforces secure access, try http and notice how the request redirects to https
