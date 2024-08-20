@@ -1,0 +1,44 @@
+---
+Metadata:
+  TemplateId: "arn:aws:cloudformation:us-east-1:533267206873:generatedTemplate/7e54c8c9-12b5-4c95-bf95-6f94370cac3b"
+Resources:
+  Route53HostedZone00Z000589122IJJJLG2EQ2A00ro2VK:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Route53::HostedZone"
+    DeletionPolicy: "Retain"
+    Properties:
+      VPCs: []
+      HostedZoneConfig:
+        Comment: "HostedZone created by Route53 Registrar"
+      Name: "skarol.click."
+  S3Bucket00skarolclick002OHx1:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: "Retain"
+    Properties:
+      WebsiteConfiguration:
+        IndexDocument: "index.html"
+      PublicAccessBlockConfiguration:
+        RestrictPublicBuckets: false
+        IgnorePublicAcls: false
+        BlockPublicPolicy: false
+        BlockPublicAcls: false
+      BucketName: "skarol.click"
+      OwnershipControls:
+        Rules:
+        - ObjectOwnership: "BucketOwnerEnforced"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - BucketKeyEnabled: true
+          ServerSideEncryptionByDefault:
+            SSEAlgorithm: "AES256"
+  EC2VPC00vpc0f13eb00dd5e848b500FMm80:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "172.31.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags: []

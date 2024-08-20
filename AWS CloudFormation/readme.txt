@@ -1,0 +1,1 @@
+Deployed an Amazon EC2 server with Amazon VPC and its components using Amazon CloudFormation. Implemented scaling and load balancing features using Elastic Load Balancing and AWS Auto Scaling Groups.
